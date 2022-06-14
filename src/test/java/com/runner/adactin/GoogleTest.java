@@ -1,0 +1,24 @@
+package com.runner.adactin;
+
+import org.junit.BeforeClass;
+import org.junit.runner.RunWith;
+import org.openqa.selenium.WebDriver;
+
+import com.adactin.baseclass.Baseclass;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(features = "C:\\Users\\Public\\adactin\\src\\test\\java\\com\\feature\\adactin\\Google.feature",
+glue = "com.stepdefinition.adactin")
+public class GoogleTest {
+public static WebDriver driver;
+	@BeforeClass
+	public static void setUp() {
+		driver=Baseclass.BrowserLaunch("chrome");
+		}
+	
+	
+	
+}
